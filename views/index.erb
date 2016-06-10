@@ -1,0 +1,26 @@
+<h2>Junat Käpylästä Helsingin keskustaan:</h2>
+<table>
+  <th>Linja</th>
+  <th>Aikataulun mukainen aika</th>
+  <th>Todellinen aika</th>
+  <% for @departure in @kapyla_to_helsinki %>
+    <tr>
+      <td><%= @departure[:line] %></td>
+      <td><%= @departure[:time] %></td>
+      <td><%= @departure[:real_time] || '-' %></td>
+    </tr>
+  <% end %>
+</table>
+<h2>Bussit Maunulasta Helsingin keskustaan:</h2>
+<table>
+  <th>Linja</th>
+  <th>Aikataulun mukainen aika</th>
+  <th>Todellinen aika</th>
+  <% for @departure in @maunula_to_helsinki %>
+    <tr>
+      <td><%= @departure[:line] %></td>
+      <td><%= @departure[:time] %></td>
+      <td><%= @departure[:real_time] || '-' %></td>
+    </tr>
+  <% end %>
+</table>
