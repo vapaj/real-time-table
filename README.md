@@ -3,7 +3,7 @@ Simple web app to read realtime HSL data.
 
 ```
 bundle install
-ruby hsl_realtime.rb
+bundle exec rackup
 ```
 Running app can be found in Heroku.
 ````
