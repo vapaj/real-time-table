@@ -1,5 +1,5 @@
 require 'soap/rpc/driver'
-require 'pry'
+
 module RealTimeTables
 
   # Endpoints specified at:
