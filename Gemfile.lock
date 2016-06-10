@@ -2,6 +2,9 @@ GEM
   remote: https://rubygems.org/
   specs:
     httpclient (2.8.0)
+    mini_portile2 (2.0.0)
+    nokogiri (1.6.7.2)
+      mini_portile2 (~> 2.0.0.rc2)
     puma (3.4.0)
     rack (1.6.4)
     rack-protection (1.5.3)
@@ -18,6 +21,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  nokogiri
   puma
   sinatra
   soap4r
