@@ -1,18 +1,15 @@
 require 'sinatra'
 require 'json'
+require 'erb'
 require './lib/real_time_tables'
 
 get '/' do
-  content_type :json
   timetable_kapyla  = RealTimeTables::Stop.new('kapyla')
   timetable_maunula = RealTimeTables::Stop.new('maunula')
 
-  response = {
-    kapyla_to_helsinki:  construct_response(timetable_kapyla.get_next_20_departures),
-    maunula_to_helsinki: construct_response(timetable_maunula.get_next_20_departures),
-  }
-  
-  response.to_json
+  @kapyla_to_helsinki  = construct_response(timetable_kapyla.get_next_20_departures)
+  @maunula_to_helsinki =  construct_response(timetable_maunula.get_next_20_departures)
+  erb :index
 end
 
 helpers do
