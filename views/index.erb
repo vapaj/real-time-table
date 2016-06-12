@@ -24,3 +24,16 @@
     </tr>
   <% end %>
 </table>
+<h2>Bussit Tuusulanväylältä Helsingin keskustaan:</h2>
+<table>
+  <th>Linja</th>
+  <th>Aikataulun mukainen aika</th>
+  <th>Todellinen aika</th>
+  <% for @departure in @kaskynhaltijantie_to_helsinki %>
+    <tr>
+      <td><%= @departure[:line] %></td>
+      <td><%= @departure[:time] %></td>
+      <td><%= @departure[:real_time] || '-' %></td>
+    </tr>
+  <% end %>
+</table>
